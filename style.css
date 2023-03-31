@@ -1,0 +1,44 @@
+
+html, body{
+  min-height:100%;
+  width:100%;
+}
+ 
+.btn-close{
+    background-size: 0.5em;
+}
+.truncate-3{
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    overflow: hidden;
+    hyphens: auto;
+    width:100%;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+ 
+/** Internet birikmesi */
+#connectionMessage{
+  opacity: 0;
+  transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
+}
+#connectionMessage .card.online{
+  border: 1px solid var(--bs-teal) !important;
+}
+#connectionMessage .card.offline{
+  border: 1px solid #dc354540 !important;
+}
+#connectionMessage .card.online .material-symbols-outlined{
+  color: var(--bs-teal);
+}
+#connectionMessage .card.offline .material-symbols-outlined, 
+#connectionMessage .card.offline .cm-text-field{
+  color: var(--bs-gray-700);
+}
+#connectionMessage .card.online .cm-text-field{
+  color: var(--bs-gray-dark);
+}
